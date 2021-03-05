@@ -1,0 +1,27 @@
+<link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+<link rel="dns-prefetch" href="https://res.cloudinary.com/">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+<link rel="preconnect" href="https://littlezhang.goatcounter.com/" crossorigin>
+<link rel="dns-prefetch" href="https://littlezhang.goatcounter.com/">
+{{- if not .Page.IsHome -}}
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcecodepro/v11/HI_XiYsKILxRpg3hIP6sJ7fM7PqtzsjDs-cq.woff2" as="font" type="font/woff2" crossorigin>
+{{- end -}}
+{{- $coreCSS := resources.Get "css/style.css" -}}
+
+{{- $coreCSS = slice $coreCSS | resources.Concat "css/tmp_core.css" -}}
+
+{{ $criticalCSS := resources.Get "css/critical-style.css" }}
+{{- with partial "custom-css.html" . -}}
+    {{- if ne . "" -}}
+        {{- $criticalCSS = slice $criticalCSS . | resources.Concat "css/custom_core.css" -}}
+        {{- $criticalCSS = $criticalCSS | resources.Minify -}}
+    {{- end -}}
+{{- end -}}
+
+{{- $coreCSS = slice $coreCSS ("" | resources.FromString "css/_core.css") | resources.Concat "css/core.css" -}}
+{{- $coreCSS = $coreCSS | resources.Minify | resources.Fingerprint "sha384" -}}
+
+<link rel="preload" href="{{- $coreCSS.RelPermalink -}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{- $coreCSS.RelPermalink -}}" integrity="{{- $coreCSS.Data.Integrity -}}"></noscript>
+<style type="text/css">{{- $criticalCSS.Content | safeCSS -}}</style>

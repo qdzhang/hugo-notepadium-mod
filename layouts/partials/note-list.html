@@ -1,0 +1,37 @@
+{{- $paginator := . -}}
+
+{{- if gt $paginator.TotalPages 0 -}}
+<ul class="note-list">
+    {{- range $paginator.Pages -}}
+    <li class="item"><a class="note" href="{{- .RelPermalink -}}">
+            <p class="note-title">{{- .Title | safeHTML -}}</p>
+        </a>
+            {{- if .Date -}}<p class="note-date">{{- .Date.Format "2006-01-02" -}}</p>{{- end -}}
+            {{- if .Summary -}}<p class="note-content">{{- .Summary | plainify | safeHTML -}}{{- if .Truncated -}}<span>&mldr;</span>{{- end -}}</p>{{- end -}}
+            {{- $relURL := .RelPermalink -}}
+            {{- $imgs := .Params.imgs -}}
+            {{- with .Params.imgs -}}
+                <span class="note-imgs">
+                    {{- $imgCount := len $imgs -}}
+                    {{- range $imgs -}}
+                    {{- $imgurl := lower . -}}
+                    {{- if and (not (hasPrefix $imgurl "http://")) (not (hasPrefix $imgurl "https://")) -}}
+                    {{- $imgurl = path.Join $relURL . -}}
+                    {{- end -}}
+                    <img class="img" src="{{- $imgurl -}}" alt />
+                    {{- end -}}
+                </span>
+            {{- end -}}
+
+        {{- if or .Params.categories .Params.tags -}}
+            <p class="note-labels">
+                {{- range .Params.tags -}}
+                {{- $url := print "/tags/" ( . | urlize) "/" -}}
+                <a class="article-tag" href="{{- $url | relURL -}}"><span class="hashtag">#</span>{{- . -}}</a>
+                {{- end -}}
+            </p>
+        {{- end -}}
+    </li>
+    {{- end -}}
+</ul>
+{{- end -}}

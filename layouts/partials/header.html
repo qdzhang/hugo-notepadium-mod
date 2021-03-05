@@ -1,0 +1,15 @@
+<section id="header" class="header">
+        <div class="header-left"><a href="{{- `/` | relURL -}}">
+            {{- $logo := .Site.Params.logo -}}
+            {{- if $logo -}}
+                <img class="site-logo" src="{{- $logo | relURL -}}" alt />
+            {{- end -}}
+            <p class="site-name">{{- .Site.Title -}}</p></a>
+        </div>
+        <div class="header-right">
+            {{- partial "navigation-items.html" .Site.Params.nav -}}
+        </div>
+    {{- with .Site.Params.slogan -}}
+        <div class="site-slogan"><p class="title">{{- . | safeHTML -}}</p></div>
+    {{- end -}}
+</section>

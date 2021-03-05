@@ -1,0 +1,17 @@
+{{- define "main" -}}
+{{- $justify := false -}}
+{{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
+
+<section class="article-header" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
+    <h1>{{- .Title | safeHTML -}}</h1>
+</section>
+<div class="article-containter">
+<article class="markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
+    {{- .Content -}}
+</article>
+</div>
+
+{{- partial "article-labels.html" . -}}
+{{- partial "article-license.html" . -}}
+{{- partial "article-comments.html" . -}}
+{{- end -}}

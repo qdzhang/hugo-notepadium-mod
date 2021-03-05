@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+{{- hugo.Generator -}}
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+
+<meta name="keywords" content="blog, 博客, 理头张, littlezhang, 个人博客, 文字, hugo, 原创"/>
+<meta name="description" content="littlezhang's blog，理清头绪，分享经验，修炼文字，让自己的表达明白了当"/>
+<meta name="author" content="理头张">
+<meta name="copyright"content="理头张">
+<meta http-equiv="content-language" content="zh,en">
+
+<meta name="msvalidate.01" content="C48D7007932689E9428166D439B8120D" />
+<meta name="google-site-verification" content="joRs891zFcA8VFOnKaPmYjMBEj4fpHSUrvpk2nnAaPs" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+{{- define "title" -}}
+    {{- $title := .Title -}}
+    {{- if and (ne $title "") (ne $title .Site.Title) -}}
+        <title>{{- $title | safeHTML -}} &nbsp;&ndash;&nbsp; {{- .Site.Title | safeHTML -}}</title>
+    {{- else -}}
+        {{- $slogan := .Site.Params.slogan -}}
+        <title>{{- .Site.Title | safeHTML -}}{{- if and (isset .Site.Params "slogan") (ne $slogan "") -}} &nbsp;&ndash;&nbsp;
+            {{- $slogan | safeHTML -}}{{- end -}}</title>
+    {{- end -}}
+{{- end -}}
+
+{{- block "title" . -}}{{- end -}}
+
+{{- partial "style.html" . -}}
+<!-- {{- partial "bdtongji.html" . -}} -->

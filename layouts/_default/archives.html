@@ -1,0 +1,25 @@
+{{- define "main" -}}
+<div class="content">
+    <section class="article-header">
+      <h1>{{- .Title | safeHTML -}}</h1>
+    </section>
+    <div class="article-containter">
+      {{- $postCount := len (where .Site.RegularPages "Section" "!=" "") -}}
+      <p class="archive-text">✒️目前共有&nbsp{{- $postCount -}}&nbsp篇文章</p>
+      {{- with .Site.GetPage "Type" "post" -}}
+      {{- range (.Site.RegularPages.GroupByDate "2006") -}}
+      {{- if (gt .Key 2016) -}}
+      <p class="archive-year">{{- .Key -}}</p>
+      {{- end -}}
+          <ul class="archive-list">
+              {{- range (where .Pages "Type" "post") -}}
+                  <li>
+                      <span class="archive-date">{{- .PublishDate.Format "2006-01-02" -}}</span><a href="{{- .RelPermalink -}}">{{- .Title -}}</a>
+                  </li>
+              {{- end -}}
+          </ul>
+      {{- end -}}
+      {{- end -}}
+</div>
+</div>
+{{- end -}}

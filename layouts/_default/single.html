@@ -1,0 +1,20 @@
+{{- define "main" -}}
+{{- $justify := false -}}
+{{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
+<div class="article-containter">
+<section class="article-header" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
+    <h1>{{- .Title | safeHTML -}}</h1>
+    {{- if .Date -}}
+    <p class="article-date">{{- .Date.Format "2006-01-02" -}}</p>
+    {{- end -}}
+    
+</section>
+{{- partial "article-labels.html" . -}}
+<article class="markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
+    {{- .Content -}}
+</article>
+</div>
+{{- partial "article-license.html" . -}}
+{{- partial "article-bottom-navigation.html" . -}}
+{{- partial "article-comments.html" . -}}
+{{- end -}}

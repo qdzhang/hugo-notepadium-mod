@@ -1,0 +1,27 @@
+{{- $nav := . -}}
+{{- if or $nav.showCategories $nav.showTags $nav.custom -}}
+<div class="nav">
+    {{- if $nav.showCategories -}}
+        <a class="nav-item" href="{{- `/categories/` | relURL -}}">Categories</a>
+    {{- end -}}
+    {{- if $nav.showTags -}}
+        <a class="nav-item" href="{{- `/tags/` | relURL -}}">Tags</a>
+    {{- end -}}
+    {{- range $nav.custom -}}
+        {{- $url := .url | safeURL -}}
+        {{- if strings.HasPrefix $url "/" -}}{{- $url = $url | relURL -}}{{- end -}}
+        <a class="nav-item" href="{{- $url -}}" 
+            {{- if strings.HasPrefix $url "http" -}}target="_blank"
+            {{- end -}}>{{- .title -}}</a>
+    {{- end -}}
+
+{{- $style := "auto" -}}
+{{- if and (.Site.Params.style) (ne .Site.Params.style "") -}}
+{{- $style = .Site.Params.style | lower -}}
+{{- end -}}
+
+{{- if ne $style "light" -}}
+    {{- partial "dark-mode.html" . -}}
+{{- end -}}
+</div>
+{{- end -}}
