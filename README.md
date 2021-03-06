@@ -1,6 +1,8 @@
-![](https://raw.githubusercontent.com/cntrump/hugo-notepadium/master/images/screenshot.png)
-
 # hugo-notepadium ![](https://img.shields.io/badge/license-MIT-blue.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/2f389751-e070-437b-9dbd-3773bd57322e/deploy-status)](https://lvv.me)
+
+A Hugo theme forked from early version of [hugo-notepadium](https://github.com/cntrump/hugo-notepadium).
+
+** [WIP] The project and readme is still working in progress! You can contact me if you have any question. **
 
 Request Hugo Version: [0.60.0+](https://github.com/gohugoio/hugo/releases/)
 
