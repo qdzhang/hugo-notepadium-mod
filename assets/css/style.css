@@ -278,6 +278,10 @@ nav ul li a:focus {
   border-left: 2px solid var(--color-primary);
 }
 
+.center {
+  text-align: center;
+}
+
 @media (max-width: 1080px) {
   .toc {
       display: none;
