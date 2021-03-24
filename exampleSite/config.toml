@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
-title = "Notepadium"
-theme = "hugo-notepadium"
-copyright = "©2019 Notepadium."
+title = "Notepadium-mod"
+theme = "hugo-notepadium-mod"
+copyright = "©2021 Notepadium-mod"
 
 languageCode = "zh-cn"
 hasCJKLanguage = true
@@ -24,7 +24,7 @@ unsafe = true  # enable raw HTML in Markdown
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 logo = ""
-slogan = "100% JavaScript-free"
+# slogan = "100% JavaScript-free"
 #license = "<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt=Creative Commons License style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png /></a><br />This work is licensed under a <a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>."
 
 [params.assets]
@@ -42,9 +42,17 @@ use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
 theme = "xcode"
 darkTheme = "xcode-dark"
 
-[params.nav]
-showCategories = true       # /categories/
-showTags = true             # /tags/
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[[params.nav.custom]]
+title = "Tags"
+url = "/tags/"
+
+[[params.nav.custom]]
+title = "Archives"
+url = "/archives/"
 
 [[params.nav.custom]]
 title = "About"
