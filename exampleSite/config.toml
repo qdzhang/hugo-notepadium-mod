@@ -1,6 +1,7 @@
 baseURL = "https://example.com"
 title = "Notepadium-mod"
 theme = "hugo-notepadium-mod"
+themesdir = "../.."
 copyright = "©2021 Notepadium-mod"
 
 languageCode = "zh-cn"
