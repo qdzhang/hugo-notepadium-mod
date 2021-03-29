@@ -1,11 +1,15 @@
 {{- define "main" -}}
-<div>
-    <section class="article-header">
-      <h1>{{- .Title | safeHTML -}}</h1>
-    </section>
-<script async src="https://cse.google.com/cse.js?cx=73a277125a3d209a0"></script>
-<div class="gcse-search"></div>
-<div class="article-date center">
- 搜索功能由 Google 提供 
+<div class="article-header">
+<h1>Search</h1>
+</div>
+<link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
+<div class="stork-wrapper">
+  <input data-stork="posts" class="stork-input" />
+  <div data-stork="posts-output" class="stork-output"></div>
+</div>
+<script src="https://files.stork-search.net/stork.js"></script>
+<script>stork.register('posts', '/stork-posts.st');</script>
+<div class="center">
+  Search powered by <a href="https://github.com/jameslittle230/stork" target="_blank">stork</a>
 </div>
 {{- end -}}

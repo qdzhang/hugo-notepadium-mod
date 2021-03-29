@@ -1,0 +1,15 @@
+{{ with .Site.GetPage "Type" "post" }}
+{{ range (.Site.RegularPages.GroupByDate "2006") }}
+    {{ range (where .Pages "Type" "post") }}
+
+[[input.files]]
+path = "content/{{ .File.Path }}"
+url = "{{ .Permalink }}"
+title = "{{ .Title }}"
+
+    {{ end }}
+{{ end }}
+{{ end }}
+
+[output]
+filename = "public/stork-posts.st"
