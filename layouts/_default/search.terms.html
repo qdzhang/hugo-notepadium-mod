@@ -1,0 +1,15 @@
+{{- define "main" -}}
+<div class="article-header">
+<h1>Search</h1>
+</div>
+<link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
+<div class="stork-wrapper">
+  <input data-stork="posts" class="stork-input" />
+  <div data-stork="posts-output" class="stork-output"></div>
+</div>
+<script src="https://files.stork-search.net/stork.js"></script>
+<script>stork.register('posts', '/stork-posts.st');</script>
+<div class="center">
+  Search powered by <a href="https://github.com/jameslittle230/stork" target="_blank">stork</a>
+</div>
+{{- end -}}
