@@ -1,15 +1,12 @@
-{{ with .Site.GetPage "Type" "post" }}
-{{ range (.Site.RegularPages.GroupByDate "2006") }}
-    {{ range (where .Pages "Type" "post") }}
-
+{{- with .Site.GetPage "Type" "post" -}}
+{{- range (.Site.RegularPages.GroupByDate "2006") -}}
+{{ range (where .Pages "Type" "post") }}
 [[input.files]]
 path = "exampleSite/content/{{ .File.Path }}"
 url = "{{ .Permalink }}"
 title = "{{ .Title }}"
-
-    {{ end }}
 {{ end }}
-{{ end }}
-
+{{- end -}}
+{{- end -}}
 [output]
 filename = "exampleSite/public/stork-posts.st"
