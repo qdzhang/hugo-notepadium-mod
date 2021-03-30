@@ -1,8 +1,10 @@
 {{- define "main" -}}
-<div class="article-header">
+<section div class="article-header">
 <h1>Search</h1>
-</div>
-<link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
+</section>
+{{- $basicCSS := resources.Get "css/stork-search.css" -}}
+{{- $basicCSS = $basicCSS | resources.Minify | resources.Fingerprint "sha384" -}}
+<link rel="stylesheet" href="{{- $basicCSS.RelPermalink -}}" />
 <div class="stork-wrapper">
   <input data-stork="posts" class="stork-input" />
   <div data-stork="posts-output" class="stork-output"></div>

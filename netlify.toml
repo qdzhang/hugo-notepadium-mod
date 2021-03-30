@@ -1,6 +1,6 @@
 [build]
   publish = "exampleSite/public"
-  command = "hugo --gc --minify -s exampleSite"
+  command = "chmod +x build.sh && ./build.sh"
 
 [build.environment]
   HUGO_THEME = "repo"

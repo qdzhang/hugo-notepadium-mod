@@ -24,6 +24,17 @@ style = "dracula"
 [markup.goldmark.renderer]
 unsafe = true  # enable raw HTML in Markdown
 
+[mediaTypes]
+[mediaTypes."text/toml"]
+suffixes = ["toml"]
+
+[outputFormats]
+[outputFormats.TOML]
+mediaType = "text/toml"
+
+[outputs]
+  home = ["HTML", "RSS", "TOML"]
+
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 logo = ""
@@ -43,6 +54,7 @@ use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
 [taxonomies]
   category = "categories"
   tag = "tags"
+  search = "search"
 
 [[params.nav.custom]]
 title = "Tags"
@@ -51,6 +63,10 @@ url = "/tags/"
 [[params.nav.custom]]
 title = "Archives"
 url = "/archives/"
+
+[[params.nav.custom]]
+title = "Search"
+url = "/search/"
 
 [[params.nav.custom]]
 title = "About"
