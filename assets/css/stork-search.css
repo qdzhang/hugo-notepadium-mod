@@ -1,8 +1,20 @@
+html {
+  --stork-background-color: hsl(0, 0%, 100%);
+  --stork-message-color: hsla(0, 0%, 0%, 0.8);
+}
+
+html[data-theme='dark'] {
+  --stork-background-color: hsl(215,15%,20%);
+  --stork-message-color: hsla(0,0%,85.5%, 0.8);
+  --stork-lighter-color: hsla(0,0%,85.5%, 0.6);
+}
+
 .stork-wrapper,
 .stork-wrapper-basic {
   position: relative;
   font-family: sans-serif;
   box-sizing: border-box;
+  margin: 20px;
 }
 
 .stork-wrapper *,
@@ -22,7 +34,8 @@
   border: 1px solid hsla(0, 0%, 0%, 0.2);
   border-radius: 4px;
   position: relative;
-  color: black;
+  color: var(--stork-message-color);
+  background: var(--stork-background-color);
 }
 
 .stork-progress,
@@ -64,7 +77,7 @@
 
 .stork-output-visible,
 .stork-wrapper-basic .stork-output-visible {
-  background: hsl(0, 0%, 100%);
+  background: var(--stork-background-color);
   border: 1px solid hsla(0, 0%, 0%, 0.1);
 }
 
@@ -72,7 +85,7 @@
 .stork-wrapper-basic .stork-message {
   width: 100%;
   padding: 0.5rem 1rem;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--stork-message-color);
 }
 
 .stork-attribution,
@@ -80,7 +93,7 @@
   width: 100%;
   padding: 0.5rem 1rem;
   font-size: 0.8em;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--stork-message-color);
 }
 
 .stork-results,
@@ -149,7 +162,7 @@
   width: 1.5rem;
   padding: 0px;
   font-size: 1.1rem;
-  background: hsla(0, 0%, 0%, 0.2);
+  background: var(--stork-message-color);
   color: black;
   border: none;
   border-radius: 15%;
@@ -158,11 +171,11 @@
 
 .stork-close-button:hover,
 .stork-wrapper-basic .stork-close-button:hover {
-  background: hsla(0, 0%, 0%, 0.3);
+  background: var(--stork-lighter-color);
   cursor: pointer;
 }
 
 .stork-close-button:active,
 .stork-wrapper-basic .stork-close-button:active {
-  background: hsla(0, 0%, 0%, 0.4);
+  background: var(--stork-lighter-color);
 }
