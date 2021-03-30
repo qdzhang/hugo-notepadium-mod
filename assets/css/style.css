@@ -280,6 +280,7 @@ nav ul li a:focus {
 
 .center {
   text-align: center;
+  color: var(--title-color);
 }
 
 @media (max-width: 1080px) {
