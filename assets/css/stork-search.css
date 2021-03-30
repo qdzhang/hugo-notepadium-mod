@@ -154,7 +154,7 @@ html[data-theme='dark'] {
   background-color: hsl(59, 98%, 58%);
 }
 
-.html[data-theme='dark'] stork-result:not(.selected) .stork-highlight {
+html[data-theme='dark'] .stork-result:not(.selected) .stork-highlight {
   background-color:hsl(58.9,98.1%,20%);
 }
 
