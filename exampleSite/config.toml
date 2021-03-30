@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://theme-notemod.littlezhang.com/"
 title = "Notepadium-mod"
 theme = "hugo-notepadium-mod"
 themesdir = "../.."

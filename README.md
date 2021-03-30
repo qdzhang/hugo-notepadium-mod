@@ -1,5 +1,7 @@
 # hugo-notepadium-mod ![](https://img.shields.io/badge/license-MIT-blue.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/b0669122-2fec-4094-b3ce-f5717ba90517/deploy-status)](https://app.netlify.com/sites/distracted-mirzakhani-1980a4/deploys)
 
+[English] [中文](./README.zh.md)
+
 A fast and simple [Hugo](https://gohugo.io) theme, **100% JavaScript-free**.
 
 [✨**Live demo**](https://theme-notemod.littlezhang.com/) [✨littlezhang's blog](https://www.littlezhang.com)
@@ -16,6 +18,7 @@ A fast and simple [Hugo](https://gohugo.io) theme, **100% JavaScript-free**.
   * [Option 1](#option-1)
   * [Option 2](#option-2)
 * [Configure theme](#configure-theme)
+* [Update theme](#update-theme)
 * [Customize theme](#customize-theme)
 * [Thanks](#thanks)
 
@@ -40,6 +43,7 @@ Request Hugo Version: [0.68.0+](https://github.com/gohugoio/hugo/releases/)
 - [hugo modules](https://gohugo.io/categories/hugo-modules)
 - archive page
 - light & dark theme toggle button
+- search in site (powered by [stork](https://github.com/jameslittle230/stork)) [How to use it?]()
 
 ### Other features
 
@@ -224,6 +228,21 @@ title = "About"
 url = "/about/"
 ```
 
+## Update theme
+
+If you installed the theme by Hugo module
+
+```bash
+hugo mod get -u  # This will update all modules
+hugo mod get -u github.com/qdzhang/hugo-notepadium-mod  # This will update current theme
+```
+
+If you installed the theme by git submodule
+
+```bash
+git pull
+```
+
 ## Customize theme
 
 ## Thanks
@@ -232,4 +251,5 @@ url = "/about/"
 - [**hugo-notepadium**](https://github.com/cntrump/hugo-notepadium)
 - [**MathJax**](https://www.mathjax.org/)
 - [**Katex**](https://katex.org/)
+- [**stork**](https://github.com/jameslittle230/stork)
 - Some minimal designs inspired by [**Kev Quirk**](https://kevq.uk/) 
