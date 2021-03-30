@@ -1,12 +1,15 @@
 html {
   --stork-background-color: hsl(0, 0%, 100%);
   --stork-message-color: hsla(0, 0%, 0%, 0.8);
+  --stork-lighter-color: hsla(0, 0%, 0%, 0.5);
+  --stork-btn-color: hsla(0, 0%, 0%, 0.3);
 }
 
 html[data-theme='dark'] {
   --stork-background-color: hsl(215,15%,20%);
   --stork-message-color: hsla(0,0%,85.5%, 0.8);
   --stork-lighter-color: hsla(0,0%,85.5%, 0.6);
+  --stork-btn-color: hsla(0, 0%, 0%, 0.3);
 }
 
 .stork-wrapper,
@@ -68,6 +71,10 @@ html[data-theme='dark'] {
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.stork-result:not(.selected) {
+    color: var(--stork-message-color);
 }
 
 .stork-attribution a:link,
@@ -147,6 +154,10 @@ html[data-theme='dark'] {
   background-color: hsl(59, 98%, 58%);
 }
 
+.html[data-theme='dark'] stork-result:not(.selected) .stork-highlight {
+  background-color:hsl(58.9,98.1%,20%);
+}
+
 .stork-error,
 .stork-wrapper-basic .stork-error {
   outline: 2px solid hsl(0, 89%, 46%);
@@ -162,8 +173,8 @@ html[data-theme='dark'] {
   width: 1.5rem;
   padding: 0px;
   font-size: 1.1rem;
-  background: var(--stork-message-color);
-  color: black;
+  background: var(--stork-btn-color);
+  color: var(--stork-message-color);
   border: none;
   border-radius: 15%;
   line-height: 1;
