@@ -1,10 +1,10 @@
-# hugo-notepadium-mod ![](https://img.shields.io/badge/license-MIT-blue.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/b0669122-2fec-4094-b3ce-f5717ba90517/deploy-status)](https://app.netlify.com/sites/distracted-mirzakhani-1980a4/deploys)
+# hugo-notepadium-mod 
 
-[English] [中文](./README.zh.md)
+![](https://img.shields.io/badge/license-MIT-blue.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/b0669122-2fec-4094-b3ce-f5717ba90517/deploy-status)](https://app.netlify.com/sites/distracted-mirzakhani-1980a4/deploys)
+
+[English](./README.md) | [中文](./README.zh-CN.md) | [✨**Live demo**](https://theme-notemod.littlezhang.com/) | [✨littlezhang's blog](https://www.littlezhang.com)
 
 A fast and simple [Hugo](https://gohugo.io) theme, **100% JavaScript-free**.
-
-[✨**Live demo**](https://theme-notemod.littlezhang.com/) [✨littlezhang's blog](https://www.littlezhang.com)
 
 ![notepadium-mod](./images/Notepadium-mod.png)
 
