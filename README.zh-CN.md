@@ -1,70 +1,70 @@
-# 雨果记事本
+# hugo-notepadium-mod 
 
-![](https://img.shields.io/badge/license-MIT-blue.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/b0669122-2fec-4094-b3ce-f5717ba90517/deploy-status)](https://app.netlify.com/sites/distracted-mirzakhani-1980a4/deploys)
+![](https://img.shields.io/badge/license-MIT-blue.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/b0669122-2fec-4094-b3ce-f5717ba90517/deploy-status)](https://app.netlify.com/sites/distracted-mirzakhani-1980a4/deploys)
 
-[英语](./README.md)\|[中文](./README.zh-CN.md)\|[✨**现场演示**](https://theme-notemod.littlezhang.com/)\|[ttlelittlezhang的博客](https://www.littlezhang.com)
+[English](./README.md) | [中文](./README.zh-CN.md) | [✨**Live demo**](https://theme-notemod.littlezhang.com/) | [✨littlezhang's blog](https://www.littlezhang.com)
 
-快速简单[雨果](https://gohugo.io)主题，**100％不含JavaScript**.
+快速简单的 [Hugo](https://gohugo.io) 主题，**100％不含JavaScript**.
 
 ![notepadium-mod](./images/Notepadium-mod.png)
 
 <!-- vim-markdown-toc GFM -->
 
--   [介绍](#introduce)
--   [特征](#features)
-    -   [与原始的notepadium主题不同：](#different-from-original-notepadium-theme)
-    -   [其它功能](#other-features)
--   [开始吧](#get-start)
-    -   [选项1](#option-1)
-    -   [选项2](#option-2)
--   [配置主题](#configure-theme)
--   [更新主题](#update-theme)
--   [自定义主题](#customize-theme)
--   [谢谢](#thanks)
+* [介绍](#介绍)
+* [特色功能](#特色功能)
+  * [与原始的notepadium主题不同：](#与原始的notepadium主题不同)
+  * [其它功能](#其它功能)
+* [开始使用](#开始使用)
+  * [选项1](#选项1)
+  * [选项2](#选项2)
+* [配置主题](#配置主题)
+* [更新主题](#更新主题)
+* [自定义主题](#自定义主题)
+* [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
 
 ## 介绍
 
-雨果主题派生自[早期版本](https://github.com/cntrump/hugo-notepadium/releases/tag/v2.1.0)的[雨果笔记本](https://github.com/cntrump/hugo-notepadium).
+这个 Hugo 主题派生自[早期版本](https://github.com/cntrump/hugo-notepadium/releases/tag/v2.1.0)的[hugo-notepadium](https://github.com/cntrump/hugo-notepadium).
 
-**[在制品]该项目和自述文件仍在进行中！如有任何问题，可以与我联系。**
+**[WIP]该项目和文档仍在进行中！如有任何问题，可以与我联系。**
 
-要求雨果版本：[0.68.0+](https://github.com/gohugoio/hugo/releases/)
+要求 Hugo 版本：[0.68.0+](https://github.com/gohugoio/hugo/releases/)
 
-## 特征
+## 特色功能
 
 ### 与原始的notepadium主题不同：
 
--   网格布局 （[我可以使用网格吗？](https://caniuse.com/?search=grid))
+-   网格(grid)布局 （[我可以使用 grid 吗？](https://caniuse.com/?search=grid))
 -   标签云
--   脚跟
+-   目录
 -   预连接和预取资源
 -   内联关键CSS
--   [雨果模块](https://gohugo.io/categories/hugo-modules)
+-   [Hugo Modules](https://gohugo.io/categories/hugo-modules)
 -   存档页面
 -   浅色和深色主题切换按钮
--   在网站中搜索（提供者：[鹳](https://github.com/jameslittle230/stork))[如何使用它？](<>)
+-   在网站中搜索（功能提供：[stork](https://github.com/jameslittle230/stork))[如何使用它？](<>)
 
 ### 其它功能
 
--   标识
--   导航项目
+-   LOGO
+-   导航栏
 -   语法高亮
 -   数学支持
 -   分页，支持大量页面
--   光线暗
+-   黑暗模式
 -   自定义CSS支持
 -   自定义JS支持
--   自定义标题权项支持
+-   自定义 header
 
-## 开始吧
+## 开始使用
 
 对于Hugo网站，有两种方法可以使用此主题。
 
 ### 选项1
 
-使用Hugo模块。 Hugo Modules由Go Modules驱动。如果您已经安装[走](https://golang.org/)，此选项是**推荐的**。可以在以下找到更多详细信息[雨果文档](https://gohugo.io/hugo-modules/use-modules/)
+使用 Hugo 模块。 Hugo Modules 由 Go Modules 驱动。如果您已经安装[Go](https://golang.org/)，此选项是**推荐的**。可以在以下找到更多详细信息[Hugo 文档](https://gohugo.io/hugo-modules/use-modules/)
 
 1.  在您的网站根目录中初始化hugo模块系统：
 
@@ -246,11 +246,11 @@ git pull
 
 ## 自定义主题
 
-## 谢谢
+## Thanks
 
--   [**雨果**](https://gohugo.io/)
--   [**雨果笔记本**](https://github.com/cntrump/hugo-notepadium)
--   [**MathJax**](https://www.mathjax.org/)
--   [**凯特克斯**](https://katex.org/)
--   [**鹳**](https://github.com/jameslittle230/stork)
--   一些最小的设计灵感来自[**怪癖之路**](https://kevq.uk/)
+- [**Hugo**](https://gohugo.io/)
+- [**hugo-notepadium**](https://github.com/cntrump/hugo-notepadium)
+- [**MathJax**](https://www.mathjax.org/)
+- [**Katex**](https://katex.org/)
+- [**stork**](https://github.com/jameslittle230/stork)
+- Some minimal designs inspired by [**Kev Quirk**](https://kevq.uk/) 
