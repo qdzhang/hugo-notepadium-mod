@@ -1,0 +1,81 @@
+{{/* Available flash types: info, warn, error, success */}}
+{{- $flashType := .Get 0 -}}
+{{- $flashTitle := .Get 1 -}}
+{{- $raw := (markdownify .Inner | chomp) -}}
+<!-- Styles of flash-messages come from Github Primer CSS -->
+<!-- https://github.com/primer/css -->
+{{- if not ($.Page.Scratch.Get "alertcount") -}}
+<style type="text/css" media="screen">
+html {
+   --color-alert-info-text: #24292e;
+   --color-alert-info-bg: #dbedff;
+   --color-alert-info-border: rgba(4,66,137,0.2);
+   --color-alert-warn-text: #24292e;
+   --color-alert-warn-bg: #fffbdd;
+   --color-alert-warn-border: rgba(176,136,0,0.2);
+   --color-alert-error-text: #24292e;
+   --color-alert-error-bg: #ffe3e6;
+   --color-alert-error-border: rgba(158,28,35,0.2);
+   --color-alert-success-text: #24292e;
+   --color-alert-success-bg: #dcffe4;
+   --color-alert-success-border: rgba(23,111,44,0.2);
+}
+html[data-theme='dark'] {
+   --color-alert-info-text: #79c0ff;
+   --color-alert-info-bg: rgba(56,139,253,0.1);
+   --color-alert-info-border: rgba(56,139,253,0.4);
+   --color-alert-warn-text: #e3b341;
+   --color-alert-warn-bg: rgba(187,128,9,0.1);
+   --color-alert-warn-border: rgba(187,128,9,0.4);
+   --color-alert-error-text: #ff7b72;
+   --color-alert-error-bg: rgba(248,81,73,0.1);
+   --color-alert-error-border: rgba(248,81,73,0.4);
+   --color-alert-success-text: #56d364;
+   --color-alert-success-bg: rgba(46,160,67,0.1);
+   --color-alert-success-border: rgba(46,160,67,0.4);
+}
+.flash {
+   position: relative;
+   padding: 20px 16px;
+   margin-bottom: 20px;
+   border-style: solid;
+   border-width: 1px;
+   border-radius: 6px;
+   border-left-style: solid;
+   border-left-width: 6px;
+}
+.flash.info {
+    color: var(--color-alert-info-text);
+    background-image: linear-gradient(var(--color-alert-info-bg), var(--color-alert-info-bg));
+    border-color: var(--color-alert-info-border);
+}
+.flash.warn {
+    color: var(--color-alert-warn-text);
+    background-image: linear-gradient(var(--color-alert-warn-bg), var(--color-alert-warn-bg));
+    border-color: var(--color-alert-warn-border);
+}
+.flash.error {
+    color: var(--color-alert-error-text);
+    background-image: linear-gradient(var(--color-alert-error-bg), var(--color-alert-error-bg));
+    border-color: var(--color-alert-error-border);
+}
+.flash.success {
+    color: var(--color-alert-success-text);
+    background-image: linear-gradient(var(--color-alert-success-bg), var(--color-alert-success-bg));
+    border-color: var(--color-alert-success-border);
+}
+#flash-title {
+   font-size: 19px;
+   font-weight: 800;
+   margin-bottom: 10px;
+}
+</style>
+{{- end -}}
+
+{{- $.Page.Scratch.Add "alertcount" 1 -}}
+<div class="flash {{ $flashType }}">
+   {{- if $flashTitle -}}
+   <p id="flash-title">{{ $flashTitle }}</p>
+   {{- end -}}
+   {{ $raw }}    
+</div>
