@@ -44,6 +44,9 @@ Request Hugo Version: [0.68.0+](https://github.com/gohugoio/hugo/releases/)
 - archive page
 - light & dark theme toggle button
 - search in site (powered by [stork](https://github.com/jameslittle230/stork)) [How to use it?]()
+- more useful Hugo shortcodes
+  - tips blocks(alert messages)
+  - plist for simple table in markdown
 
 ### Other features
 
