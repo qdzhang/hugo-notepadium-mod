@@ -21,6 +21,7 @@
 * [更新主题](#更新主题)
 * [自定义主题](#自定义主题)
 * [Thanks](#thanks)
+* [License](#license)
 
 <!-- vim-markdown-toc -->
 
@@ -254,3 +255,7 @@ git pull
 - [**Katex**](https://katex.org/)
 - [**stork**](https://github.com/jameslittle230/stork)
 - Some minimal designs inspired by [**Kev Quirk**](https://kevq.uk/) 
+
+## License
+
+Open source licensed under the [MIT License](./LICENSE).

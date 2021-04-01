@@ -21,6 +21,7 @@ A fast and simple [Hugo](https://gohugo.io) theme, **100% JavaScript-free**.
 * [Update theme](#update-theme)
 * [Customize theme](#customize-theme)
 * [Thanks](#thanks)
+* [License](#license)
 
 <!-- vim-markdown-toc -->
 
@@ -256,3 +257,7 @@ git pull
 - [**Katex**](https://katex.org/)
 - [**stork**](https://github.com/jameslittle230/stork)
 - Some minimal designs inspired by [**Kev Quirk**](https://kevq.uk/) 
+
+## License
+
+Open source licensed under the [MIT License](./LICENSE).
