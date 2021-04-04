@@ -1,6 +1,6 @@
 {{- define "main" -}}
 <section div class="article-header">
-<h1>Search</h1>
+  <h1>{{- i18n "search" | safeHTML -}}</h1>
 </section>
 {{- $basicCSS := resources.Get "css/stork-search.css" -}}
 {{- $basicCSS = $basicCSS | resources.Minify | resources.Fingerprint "sha384" -}}
