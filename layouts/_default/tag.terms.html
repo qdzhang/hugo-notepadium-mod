@@ -3,7 +3,7 @@
   {{- $terms := .Data.Terms.ByCount -}}
   {{- $length := len $terms -}}
   {{- $type := .Type -}}
-  <section class="article-header"><h1>{{- .Title -}}</h1></section>
+  <section class="article-header"><h1>{{- i18n "tags" | safeHTML -}}</h1></section>
     {{- $fontUnit := "rem" -}}
     {{- $largestFontSize := 2.0 -}}
     {{- $largestFontSize := 2.5 -}}

@@ -1,0 +1,14 @@
+[archives]
+other = "Archives"
+
+[about]
+other = "About"
+
+[tags]
+other = "Tags"
+
+[search]
+other = "Search"
+
+[archives-count]
+other = "✒️ Total posts: "
