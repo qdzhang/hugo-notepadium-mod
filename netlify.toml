@@ -5,4 +5,4 @@
 [build.environment]
   HUGO_THEME = "repo"
   HUGO_THEMESDIR = "/opt/build"
-  HUGO_VERSION = "0.68.0"
+  HUGO_VERSION = "0.82.0"
