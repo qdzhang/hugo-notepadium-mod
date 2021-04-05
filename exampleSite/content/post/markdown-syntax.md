@@ -14,6 +14,7 @@ categories = [
     "syntax",
 ]
 series = ["Themes Guide"]
+toc = true
 aliases = ["migrate-from-jekyl"]
 +++
 

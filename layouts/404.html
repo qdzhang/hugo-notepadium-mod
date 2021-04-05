@@ -1,8 +1,6 @@
 {{- define "main" -}}
 <article class="markdown-body">
-  <h1 id="title">404 NOT FOUND</h1>
-   Return <a href="/">Home</a>
-   <br></br>
-   返回 <a href="/">主页</a>
+  <h1 id="title">404</h1>
+  {{ i18n "404" }}<a href="/">{{ i18n "home"}}</a>
 </article>
 {{- end -}}
