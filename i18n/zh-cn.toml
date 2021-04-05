@@ -7,6 +7,9 @@ other = "关于"
 [tags]
 other = "标签"
 
+[categories]
+other = "分类"
+
 [search]
 other = "搜索"
 

@@ -7,6 +7,9 @@ other = "About"
 [tags]
 other = "Tags"
 
+[categories]
+other = "Categories"
+
 [search]
 other = "Search"
 

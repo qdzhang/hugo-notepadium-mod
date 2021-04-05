@@ -2,10 +2,10 @@
 {{- if or $nav.showCategories $nav.showTags $nav.custom -}}
 <div class="nav">
     {{- if $nav.showCategories -}}
-        <a class="nav-item" href="{{- `/categories/` | relURL -}}">Categories</a>
+        <a class="nav-item" href="{{- `/categories/` | relURL -}}">{{ i18n "categories" }}</a>
     {{- end -}}
     {{- if $nav.showTags -}}
-        <a class="nav-item" href="{{- `/tags/` | relURL -}}">Tags</a>
+        <a class="nav-item" href="{{- `/tags/` | relURL -}}">{{ i18n "tags" }}</a>
     {{- end -}}
     {{- range $nav.custom -}}
         {{- $url := .url | safeURL -}}
