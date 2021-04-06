@@ -7,8 +7,20 @@ other = "关于"
 [tags]
 other = "标签"
 
+[categories]
+other = "分类"
+
 [search]
 other = "搜索"
+
+[home]
+other = "主页"
+
+[404]
+other = "页面未找到。返回"
+
+[toc-title]
+other = "目录"
 
 [archives-count]
 other = "✒️ 总文章数："

@@ -7,8 +7,20 @@ other = "About"
 [tags]
 other = "Tags"
 
+[categories]
+other = "Categories"
+
 [search]
 other = "Search"
+
+[home]
+other = "Home"
+
+[404]
+other = "Page not found. Return "
+
+[toc-title]
+other = "Table of Contents"
 
 [archives-count]
 other = "✒️ Total posts: "
