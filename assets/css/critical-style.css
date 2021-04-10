@@ -21,6 +21,7 @@ html[data-theme='dark'] img {
 }
 
 html {
+    background: #fff;
     --site-name-color: #3f4b67;
     --color-primary: #005ab4;
     --link-underline: #90cff9;
