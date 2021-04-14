@@ -71,6 +71,9 @@ mediaType = "text/toml"
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 logo = ""
+keywords = "blog, theme, 博客, 个人博客, 文字, hugo, 原创"
+description = "Hugo theme notepadium mod, a simple hugo theme for blogger"
+author = "理头张"
 
 [params.assets]
 css = ["css/fonts.css"]

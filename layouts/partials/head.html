@@ -4,11 +4,22 @@
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 
-<meta name="keywords" content="blog, theme, 博客, 个人博客, 文字, hugo, 原创"/>
-<meta name="description" content="Hugo theme notepadium mod, a simple hugo theme for blogger"/>
-<meta name="author" content="理头张">
-<meta name="copyright"content="理头张">
+<meta name="keywords" content={{ .Site.Params.keywords }}>
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+<meta name="author" content={{ .Site.Params.author }}>
+<meta name="copyright"content={{ .Site.Params.author }}>
 <meta http-equiv="content-language" content="zh,en">
+
+{{ $paginator := .Paginate (where .Site.RegularPages ".Params.post" "!=" false) }}
+{{ if .IsHome }}
+{{ if eq $paginator.PageNumber 1 }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ else }}
+<link rel="canonical" href="{{ .Permalink }}page/{{ $paginator.PageNumber }}/">
+{{ end }}
+{{ else }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
