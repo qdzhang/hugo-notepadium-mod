@@ -90,7 +90,7 @@ Use git submodule.
 1. Add theme repository as git submodule
 
 ```bash
-git submodule add https://https://github.com/qdzhang/hugo-notepadium-mod.git themes/hugo-notepadium-mod
+git submodule add https://github.com/qdzhang/hugo-notepadium-mod.git themes/hugo-notepadium-mod
 ```
 
 2. Set theme in your config.toml

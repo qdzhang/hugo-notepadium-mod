@@ -88,7 +88,7 @@ hugo mod init github.com/<your_user>/<your_project>
 1.  将主题存储库添加为git子模块
 
 ```bash
-git submodule add https://https://github.com/qdzhang/hugo-notepadium-mod.git themes/hugo-notepadium-mod
+git submodule add https://github.com/qdzhang/hugo-notepadium-mod.git themes/hugo-notepadium-mod
 ```
 
 2.  在您的config.toml中设置主题
