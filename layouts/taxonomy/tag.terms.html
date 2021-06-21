@@ -1,0 +1,32 @@
+{{- define "main" -}}
+{{- $termName := .Data.Singular -}}
+  {{- $terms := .Data.Terms.ByCount -}}
+  {{- $length := len $terms -}}
+  {{- $type := .Type -}}
+  <section class="article-header"><h1>{{- i18n "tags" | safeHTML -}}</h1></section>
+    {{- $fontUnit := "rem" -}}
+    {{- $largestFontSize := 2.0 -}}
+    {{- $largestFontSize := 2.5 -}}
+    {{- $smallestFontSize := 1.0 -}}
+    {{- $fontSpread := sub $largestFontSize $smallestFontSize -}}
+    {{- $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 -}}
+    {{- $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages -}}
+    {{- $spread := sub $max $min -}}
+    {{- $fontStep := div $fontSpread $spread -}}
+    <div class="article-containter">
+    <div class="tag-cloud">      
+      {{- range $tagName, $taxonomy := $.Site.Taxonomies.tags -}}
+        {{- $currentTagCount := len $taxonomy.Pages -}}
+        {{- $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) -}}
+        {{- $count := len $taxonomy.Pages -}}
+        {{- $weigth := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) -}}
+        {{- $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth) ) -}}
+        {{- with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $tagName) -}}
+        <a href="{{- .Permalink -}}" style="font-size:{{- $currentFontSize -}}{{- $fontUnit -}}" class="tag-cloud-tags">
+          {{- $tagName -}}
+        </a>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    </div>
+{{- end -}}
