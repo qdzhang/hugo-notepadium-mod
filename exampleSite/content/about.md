@@ -5,6 +5,7 @@ date = "2019-02-28"
 aliases = ["about-us","about-hugo","contact"]
 type = "about"
 layout = "about"
+hidden = true
 author = "Hugo Authors"
 +++
 

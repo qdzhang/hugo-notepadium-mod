@@ -3,6 +3,7 @@
 {{- if gt $paginator.TotalPages 0 -}}
 <ul class="note-list">
     {{- range $paginator.Pages -}}
+    {{- if not .Params.hidden -}}
     <li class="item"><a class="note" href="{{- .RelPermalink -}}">
             <p class="note-title">{{- .Title | safeHTML -}}</p>
         </a>
@@ -32,6 +33,7 @@
             </p>
         {{- end -}}
     </li>
+    {{- end -}}
     {{- end -}}
 </ul>
 {{- end -}}
