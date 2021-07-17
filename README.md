@@ -241,10 +241,10 @@ hugo mod get -u  # This will update all modules
 hugo mod get -u github.com/qdzhang/hugo-notepadium-mod  # This will update current theme
 ```
 
-If you installed the theme by git submodule
+If you installed the theme by git submodule, first go to the theme directory, then `git pull`
 
 ```bash
-git pull
+cd themes/hugo-notepadium-mod && git pull
 ```
 
 ## Customize theme

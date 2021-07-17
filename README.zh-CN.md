@@ -239,10 +239,10 @@ hugo mod get -u  # This will update all modules
 hugo mod get -u github.com/qdzhang/hugo-notepadium-mod  # This will update current theme
 ```
 
-如果您通过git子模块安装了主题
+如果您通过git子模块安装了主题，首先进入主题目录，再执行 `git pull`
 
 ```bash
-git pull
+cd themes/hugo-notepadium-mod && git pull
 ```
 
 ## 自定义主题
