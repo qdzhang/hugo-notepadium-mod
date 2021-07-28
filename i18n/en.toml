@@ -26,4 +26,13 @@ other = "Table of Contents"
 other = "✒️ Total posts: "
 
 [edited]
-other = "edited on"
+other = "edited on "
+
+[published-before]
+other = "Last edited "
+
+[published-after]
+other = " days ago."
+
+[outdated-prompt]
+other = "The contents of post may be outdated."

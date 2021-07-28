@@ -75,6 +75,10 @@ keywords = "blog, theme, 博客, 个人博客, 文字, hugo, 原创"
 description = "Hugo theme notepadium mod, a simple hugo theme for blogger"
 author = "理头张"
 
+ShowOutdatedOnPosts = true  # Add a prompt box before a post if the post published long ago
+OutdatedDays = 730  # Collaborate with preceding params. If a post is edited before this params,
+	       	    # a prompt box will appear before the post
+
 [params.assets]
 css = ["css/fonts.css"]
 

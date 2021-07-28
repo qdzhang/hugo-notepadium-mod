@@ -26,4 +26,13 @@ other = "目录"
 other = "✒️ 总文章数："
 
 [edited]
-other = "最近修改于"
+other = "最近修改于 "
+
+[published-before]
+other = "最近修改于 "
+
+[published-after]
+other = " 天前"
+
+[outdated-prompt]
+other = "文中内容可能已经过时"
