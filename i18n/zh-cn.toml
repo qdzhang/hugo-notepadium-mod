@@ -24,3 +24,6 @@ other = "目录"
 
 [archives-count]
 other = "✒️ 总文章数："
+
+[edited]
+other = "最近修改于"

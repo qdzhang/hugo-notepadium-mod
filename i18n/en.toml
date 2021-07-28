@@ -24,3 +24,6 @@ other = "Table of Contents"
 
 [archives-count]
 other = "✒️ Total posts: "
+
+[edited]
+other = "edited on"
