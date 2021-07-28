@@ -1,5 +1,7 @@
 {{- define "main" -}}
 {{- $justify := false -}}
+{{- $date := .Date.Format "2006-01-02" -}}
+{{- $lastmod := .Lastmod.Format "2006-01-02" -}}
 {{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
 <div class="article-containter">
 <section class="article-header" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
@@ -7,7 +9,9 @@
     {{- if .Date -}}
     <p class="article-date">{{- .Date.Format "2006-01-02" -}}</p>
     {{- end -}}
-    
+    {{ if ne $lastmod $date }}
+    <p class="lastmod-date">{{- i18n "edited" | safeHTML -}} &nbsp {{- .Lastmod.Format "2006-01-02" -}}</p>
+    {{- end -}}
 </section>
 {{- partial "article-labels.html" . -}}
 <article class="markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
