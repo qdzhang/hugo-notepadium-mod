@@ -1,5 +1,8 @@
 {{- define "main" -}}
 {{- $justify := false -}}
+{{- $date := .Date.Format "2006-01-02" -}}
+{{- $lastmod := .Lastmod.Format "2006-01-02" -}}
+{{- $ageDays := div (sub now.Unix .Lastmod.Unix) 86400 -}}
 {{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
 <div class="article-containter">
 <section class="article-header" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
@@ -7,9 +10,37 @@
     {{- if .Date -}}
     <p class="article-date">{{- .Date.Format "2006-01-02" -}}</p>
     {{- end -}}
-    
+    {{ if ne $lastmod $date }}
+    <p class="lastmod-date">{{- i18n "edited" | safeHTML -}} {{- .Lastmod.Format "2006-01-02" -}}</p>
+    {{- end -}}
 </section>
 {{- partial "article-labels.html" . -}}
+
+{{- if .Site.Params.ShowOutdatedOnPosts -}}
+{{- if gt $ageDays .Site.Params.OutdatedDays -}}
+<style type="text/css" media="screen">
+  html {
+    --blockquote-border: 2px solid #0051a2;
+  }
+  html[data-theme='dark'] {
+    --blockquote-border: 2px solid #5176bf;
+  }
+  .outdated-prompt-box {
+    text-align: center;
+    background-color: var(--block-background-color);
+    border: var(--blockquote-border);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--body-color);
+  }
+</style>
+<div class="outdated-prompt-box">
+  <p>{{- i18n "published-before" | safeHTML -}} {{ $ageDays }} {{- i18n "published-after" | safeHTML -}}<br> {{- i18n "outdated-prompt" | safeHTML -}}</p>
+</div>
+{{- end -}}
+{{- end -}}
+
 <article class="markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
     {{- .Content -}}
 </article>

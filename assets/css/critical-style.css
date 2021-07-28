@@ -263,8 +263,13 @@ ul.archive-list li {
     color: #838387;
 }
 
+.lastmod-date {
+    font-size: 14px;
+    color: #838387;
+}
+
 .markdown-body {
-    color: var(--body-color); 
+    color: var(--body-color);
 }
 
 .markdown-body p {
