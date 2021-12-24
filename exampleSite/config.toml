@@ -82,8 +82,21 @@ OutdatedDays = 730  # Collaborate with preceding params. If a post is edited bef
 [params.assets]
 css = ["css/fonts.css"]
 
+# Disqus comments system
 [params.comments]
 enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+# Another comments system that using github discussion. See detail in https://giscus.app
+# Conflict with Disqus
+# TODO: auto change light/dark theme when the whole site is setting auto-theme
+[params.giscus]
+enable = true
+repo = "qdzhang/hugo-notepadium-mod"
+repoID = "MDEwOlJlcG9zaXRvcnkzNDQ3NjE4MDI="
+category = "Announcements"
+categoryID = "DIC_kwDOFIylys4CAaPN"
+dataTheme = "light"
+dataLang = "zh-CN"
 
 [params.math]
 enable = false # load math globally, default: false. You can always enable math on per page.
