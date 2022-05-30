@@ -1,0 +1,38 @@
+[archives]
+other = "Arsip"
+
+[about]
+other = "Tentang"
+
+[tags]
+other = "Tags"
+
+[categories]
+other = "Kategori"
+
+[search]
+other = "Cari"
+
+[home]
+other = "Beranda"
+
+[404]
+other = "404: Halaman yang kamu akses tidak ditemukan. Silakan kembali ke "
+
+[toc-title]
+other = "Daftar isi"
+
+[archives-count]
+other = "✒️ Jumlah Tulisan: "
+
+[edited]
+other = "Disunting "
+
+[published-before]
+other = "Terakhir ditulis "
+
+[published-after]
+other = " hari yang lalu."
+
+[outdated-prompt]
+other = "Tulisan mungkin sudah usang."
